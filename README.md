@@ -5,7 +5,7 @@
 <h1 align="center">Asciigen-wasm</h1>
 
 <p align="center">
-  <strong>Transform images and video into ASCII art using WebAssembly and WebGPU</strong>
+  <strong>Transform images and video into ASCII art using WebAssembly and WebGPU.</strong>
 </p>
 
 <p align="center">
