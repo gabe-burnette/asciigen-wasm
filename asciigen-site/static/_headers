@@ -1,0 +1,34 @@
+# Global headers (apply to all routes unless overridden)
+/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: *
+  Access-Control-Allow-Headers: *
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+# Home page specific rules
+/
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: *
+  Access-Control-Allow-Headers: *
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+# Other specific routes
+/api/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: *
+  Access-Control-Allow-Headers: *
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Catch-all for other pages
+*.html
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: *
+  Access-Control-Allow-Headers: *
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
