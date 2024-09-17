@@ -137,11 +137,11 @@
   }
 
   onMount(() => {
-    if(true)
+    if(format)
     {
-      if(format)
-        {
-          turnstileWidget = turnstile.render('#turnstile-widget', {
+      window.onloadTurnstileCallback = async function()
+      {
+        turnstileWidget = turnstile.render('#turnstile-widget', {
           sitekey: sitekey,
           callback: async function(token) {
             turnstileStatus = "Success! Loading shared content.";
@@ -195,9 +195,8 @@
             turnstile.remove(turnstileWidget);
           }
         });
-        }
+      }
     }
-    
   },() => {
     if (turnstileWidget && format) {
       turnstile.remove(turnstileWidget);
@@ -206,7 +205,7 @@
 </script>
 
 <svelte:head>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js&onload=onloadTurnstileCallback" async defer></script>
 </svelte:head>
 
 <div class="flex flex-row justify-center">
@@ -312,7 +311,7 @@ font-mono font-bold text-gray-800 gap-3 text-base mt-2 mb-2">
 
 <div class="flex justify-center
 font-mono font-bold text-gray-800 gap-2 flex-wrap mb-20 flex-col items-center mt-2">
-<p>Asciigen-WASM v0.12a - Runs locally.</p>
+<p>Asciigen-WASM v0.13a - Runs locally.</p>
 <div class="flex justify-center items-center gap-2">
 <a class="hover:text-gray-500 hover:underline" href="https://github.com/gabe-burnette/asciigen-wasm" target="_blank">Github</a>
 <p class="select-none">|</p>

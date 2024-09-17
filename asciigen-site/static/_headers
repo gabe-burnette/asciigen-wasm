@@ -14,14 +14,6 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 
-# Other specific routes
-/api/*
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: *
-  Access-Control-Allow-Headers: *
-  Cross-Origin-Opener-Policy: same-origin
-  Cross-Origin-Embedder-Policy: require-corp
-
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
