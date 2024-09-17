@@ -6,7 +6,7 @@
   import video_worker from '../components/video_worker?worker&inline'
 
   let ffmpeg;
-  var ffmpeg_loaded = "Not loaded.";
+  var ffmpeg_loaded = "Not loaded. Please wait.";
   var progress_data = "";
 
 //#region Random voids
